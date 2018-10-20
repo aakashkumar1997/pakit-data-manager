@@ -1,0 +1,127 @@
+html , body{
+	padding: 0;
+	margin: 0;
+}
+.outer_div{
+	height: 100vh;
+	overflow: scroll;
+	width: 100%;
+	background-color: #F4F4F4;
+}
+.navbar{
+	padding: 0;
+	border-bottom: 1px solid #4D4D4D;
+	margin: 0 !important;
+}
+.navbar_tabs{
+	display: inline-block;
+	background-color: transparent;
+	padding: 20px 100px;
+	margin: 0;
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+}
+.navbar_tabs:hover{
+	transition: 0.3s ease-in-out;
+	background-color: #4D4D4D;
+	color: #F4F4F4;
+}
+.display_block{
+	display: none;
+}
+#users_tab_id{
+	background-color: #4D4D4D;
+	color: #F4F4F4;
+}
+#users_tab_id_display{
+	display: block;
+}
+.users_display_wrapper{
+	height: auto;
+	width: 100%;
+	overflow-y: scroll;
+}
+.users_result_element{
+	max-height: 400px;
+	overflow-y: scroll;
+	padding: 5px auto;
+	background-color: #F4F4F4;
+	padding: 20px !important;
+	border: 1px solid #DDDDDD;
+}
+.basic_details , .send_transactions , .travel_transactions{
+	padding: 10px 0 !important;
+}
+.basic_det_ele_wrapper , .send_transac_ele_wrapper , .travel_transac_ele_wrapper{
+	padding: 0 20px !important;
+}
+.heading_div{
+	display: inline-block;
+	padding: 10px 80px 10px 10px;
+	background-color: #4D4D4D;
+	color: #F4F4F4;
+	border: 1px solid #4D4D4D;
+}
+.details_data_wrapper{
+	background-color: transparent;
+	border: 1px solid #BFBFBF;
+	padding: 0 !important;
+	text-align: center; 
+}
+.details_heading , .details_value{
+	padding: 10px 0;
+}
+.details_heading{
+	background-color: #4D4D4D;
+	border: 1px solid #DDDDDD;
+	color: #F4F4F4;
+}
+.details_value{
+	background-color: transparent;
+}
+.show_more_toggle{
+	float: right;
+	cursor: pointer;	
+}
+.more_details{
+	display: none;
+}
+.users_result_element{
+	background-color: transparent;
+}
+.search_by_row{
+	text-align: center;
+	margin: 30px 10px !important;
+}
+.search_by_row_serach_by_text{
+	font-size: 30px;
+	display: inline-block;
+}
+.search_by_row_input input{
+	border: none;
+	padding: 10px 2px;
+	background-color: #DDDDDD;
+	width: 95% !important;
+}
+.search_by_row_input_input_div{
+	padding: 0 !important;
+}
+.search_btn_row{
+	padding-top: 60px; 
+}
+.search_btn_row button{
+	width: 200px;
+	padding: 10px 0;
+	border: none;
+	background-color: #BFBFBF;
+	border-radius: 4px;
+	transition: 0.1s ease-in-out;
+	cursor: pointer;
+}
+.search_btn_row button:hover{
+	transition: 0.1s ease-in-out;
+	background-color: #DDDDDD;
+}

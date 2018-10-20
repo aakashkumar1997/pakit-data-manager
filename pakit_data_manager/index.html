@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pakit</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="outer_div">
+		<div class="navbar">
+			<div id = "users_tab_id" class="navbar_tabs navbar_users_tab" onclick="change_tab(this.id)">USERS</div>
+			<div id = "send_tab_id" class="navbar_tabs navbar_send_tab" onclick="change_tab(this.id)">SEND</div>
+			<div id = "travel_tab_id"class="navbar_tabs navbar_travel_tab" onclick="change_tab(this.id)">TRAVEL</div>
+		</div>
+		<div class="row search_by_row">
+			<div class="search_by_row_serach_by_text"> Search By : </div> 
+			<div class="search_by_row_input">
+				<div class="col-md-2 search_by_row_input_input_div">
+					<input type="text" name="name" placeholder="NAME">
+				</div>
+				<div class="col-md-2 search_by_row_input_input_div">
+					<input type="text" name="e-mail" placeholder="E-MAIL">
+				</div>
+				<div class="col-md-2 search_by_row_input_input_div">
+					<input type="text" name="phone" placeholder="PHONE">
+				</div>
+				<div class="col-md-2 search_by_row_input_input_div">
+					<input type="text" name="education" placeholder="EDUCATION">
+				</div>
+				<div class="col-md-2 search_by_row_input_input_div">
+					<input type="text" name="workplace" placeholder="WORKPLACE">
+				</div>
+				<div class="col-md-2 search_by_row_input_input_div">
+					<input type="text" name="hometown" placeholder="HOMETOWN">
+				</div>
+			</div>
+			<div class="search_btn_row">
+				<button type="button">SEARCH</button>
+			</div>
+		</div>
+		<div id="users_tab_id_display" class="display_block">
+			<div id = "user_1" class="users_display_wrapper">
+				<div class="users_result_element">
+					<div class="row basic_details">
+						<div>
+							<div class="heading_div">BASIC DETAILS</div>
+							<div id = "show_more_toggle_1" class="show_more_toggle" onclick="show_more_details(this.id)">SHOW MORE</div>
+						</div>
+						<div class="basic_det_ele_wrapper">
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">NAME</div>
+								<div class="details_value">Aakash</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">E-MAIL</div>
+								<div class="details_value">test@gmail.com</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">PHONE</div>
+								<div class="details_value">9957989683</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">EDUCATION</div>
+								<div class="details_value">IIT GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">WORKPLACE</div>
+								<div class="details_value">GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">HOMETOWN</div>
+								<div class="details_value">DELHI</div>
+							</div>
+						</div>
+					</div>
+					<div id = "more_details_1" class="more_details">
+							<div class="row send_transactions">
+							<div><div class="heading_div">SEND TRANSACTIONS</div></div>
+							<div id = "send_entry_1" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "send_entry_2" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="row travel_transactions">
+							<div><div class="heading_div">TRAVEL TRANSACTIONS</div></div>
+							<div id = "travel_entry_1" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_2" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_3" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">3</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div id = "user_2" class="users_display_wrapper">
+				<div class="users_result_element">
+					<div class="row basic_details">
+						<div>
+							<div class="heading_div">BASIC DETAILS</div>
+							<div id = "show_more_toggle_2" class="show_more_toggle" onclick="show_more_details(this.id)">SHOW MORE</div>
+						</div>
+						<div class="basic_det_ele_wrapper">
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">NAME</div>
+								<div class="details_value">Aakash</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">E-MAIL</div>
+								<div class="details_value">test@gmail.com</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">PHONE</div>
+								<div class="details_value">9957989683</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">EDUCATION</div>
+								<div class="details_value">IIT GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">WORKPLACE</div>
+								<div class="details_value">GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">HOMETOWN</div>
+								<div class="details_value">DELHI</div>
+							</div>
+						</div>
+					</div>
+					<div id = "more_details_2" class="more_details">
+							<div class="row send_transactions">
+							<div><div class="heading_div">SEND TRANSACTIONS</div></div>
+							<div id = "send_entry_1" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "send_entry_2" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="row travel_transactions">
+							<div><div class="heading_div">TRAVEL TRANSACTIONS</div></div>
+							<div id = "travel_entry_1" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_2" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_3" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">3</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id = "user_3" class="users_display_wrapper">
+				<div class="users_result_element">
+					<div class="row basic_details">
+						<div>
+							<div class="heading_div">BASIC DETAILS</div>
+							<div id = "show_more_toggle_3" class="show_more_toggle" onclick="show_more_details(this.id)">SHOW MORE</div>
+						</div>
+						<div class="basic_det_ele_wrapper">
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">NAME</div>
+								<div class="details_value">Aakash</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">E-MAIL</div>
+								<div class="details_value">test@gmail.com</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">PHONE</div>
+								<div class="details_value">9957989683</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">EDUCATION</div>
+								<div class="details_value">IIT GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">WORKPLACE</div>
+								<div class="details_value">GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">HOMETOWN</div>
+								<div class="details_value">DELHI</div>
+							</div>
+						</div>
+					</div>
+					<div id = "more_details_3" class="more_details">
+							<div class="row send_transactions">
+							<div><div class="heading_div">SEND TRANSACTIONS</div></div>
+							<div id = "send_entry_1" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "send_entry_2" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="row travel_transactions">
+							<div><div class="heading_div">TRAVEL TRANSACTIONS</div></div>
+							<div id = "travel_entry_1" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_2" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_3" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">3</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div id = "user_4" class="users_display_wrapper">
+				<div class="users_result_element">
+					<div class="row basic_details">
+						<div>
+							<div class="heading_div">BASIC DETAILS</div>
+							<div id = "show_more_toggle_4" class="show_more_toggle" onclick="show_more_details(this.id)">SHOW MORE</div>
+						</div>
+						<div class="basic_det_ele_wrapper">
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">NAME</div>
+								<div class="details_value">Aakash</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">E-MAIL</div>
+								<div class="details_value">test@gmail.com</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">PHONE</div>
+								<div class="details_value">9957989683</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">EDUCATION</div>
+								<div class="details_value">IIT GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">WORKPLACE</div>
+								<div class="details_value">GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">HOMETOWN</div>
+								<div class="details_value">DELHI</div>
+							</div>
+						</div>
+					</div>
+					<div id = "more_details_4" class="more_details">
+							<div class="row send_transactions">
+							<div><div class="heading_div">SEND TRANSACTIONS</div></div>
+							<div id = "send_entry_1" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "send_entry_2" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="row travel_transactions">
+							<div><div class="heading_div">TRAVEL TRANSACTIONS</div></div>
+							<div id = "travel_entry_1" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_2" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_3" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">3</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id = "user_5" class="users_display_wrapper">
+				<div class="users_result_element">
+					<div class="row basic_details">
+						<div>
+							<div class="heading_div">BASIC DETAILS</div>
+							<div id = "show_more_toggle_5" class="show_more_toggle" onclick="show_more_details(this.id)">SHOW MORE</div>
+						</div>
+						<div class="basic_det_ele_wrapper">
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">NAME</div>
+								<div class="details_value">Aakash</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">E-MAIL</div>
+								<div class="details_value">test@gmail.com</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">PHONE</div>
+								<div class="details_value">9957989683</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">EDUCATION</div>
+								<div class="details_value">IIT GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">WORKPLACE</div>
+								<div class="details_value">GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">HOMETOWN</div>
+								<div class="details_value">DELHI</div>
+							</div>
+						</div>
+					</div>
+					<div id = "more_details_5" class="more_details">
+							<div class="row send_transactions">
+							<div><div class="heading_div">SEND TRANSACTIONS</div></div>
+							<div id = "send_entry_1" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "send_entry_2" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="row travel_transactions">
+							<div><div class="heading_div">TRAVEL TRANSACTIONS</div></div>
+							<div id = "travel_entry_1" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_2" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_3" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">3</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div id = "user_6" class="users_display_wrapper">
+				<div class="users_result_element">
+					<div class="row basic_details">
+						<div>
+							<div class="heading_div">BASIC DETAILS</div>
+							<div id = "show_more_toggle_6" class="show_more_toggle" onclick="show_more_details(this.id)">SHOW MORE</div>
+						</div>
+						<div class="basic_det_ele_wrapper">
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">NAME</div>
+								<div class="details_value">Aakash</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">E-MAIL</div>
+								<div class="details_value">test@gmail.com</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">PHONE</div>
+								<div class="details_value">9957989683</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">EDUCATION</div>
+								<div class="details_value">IIT GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">WORKPLACE</div>
+								<div class="details_value">GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">HOMETOWN</div>
+								<div class="details_value">DELHI</div>
+							</div>
+						</div>
+					</div>
+					<div id = "more_details_6" class="more_details">
+							<div class="row send_transactions">
+							<div><div class="heading_div">SEND TRANSACTIONS</div></div>
+							<div id = "send_entry_1" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "send_entry_2" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="row travel_transactions">
+							<div><div class="heading_div">TRAVEL TRANSACTIONS</div></div>
+							<div id = "travel_entry_1" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_2" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_3" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">3</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id = "user_7" class="users_display_wrapper">
+				<div class="users_result_element">
+					<div class="row basic_details">
+						<div>
+							<div class="heading_div">BASIC DETAILS</div>
+							<div id = "show_more_toggle_7" class="show_more_toggle" onclick="show_more_details(this.id)">SHOW MORE</div>
+						</div>
+						<div class="basic_det_ele_wrapper">
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">NAME</div>
+								<div class="details_value">Aakash</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">E-MAIL</div>
+								<div class="details_value">test@gmail.com</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">PHONE</div>
+								<div class="details_value">9957989683</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">EDUCATION</div>
+								<div class="details_value">IIT GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">WORKPLACE</div>
+								<div class="details_value">GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">HOMETOWN</div>
+								<div class="details_value">DELHI</div>
+							</div>
+						</div>
+					</div>
+					<div id = "more_details_7" class="more_details">
+							<div class="row send_transactions">
+							<div><div class="heading_div">SEND TRANSACTIONS</div></div>
+							<div id = "send_entry_1" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "send_entry_2" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="row travel_transactions">
+							<div><div class="heading_div">TRAVEL TRANSACTIONS</div></div>
+							<div id = "travel_entry_1" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_2" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_3" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">3</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div id = "user_8" class="users_display_wrapper">
+				<div class="users_result_element">
+					<div class="row basic_details">
+						<div>
+							<div class="heading_div">BASIC DETAILS</div>
+							<div id = "show_more_toggle_8" class="show_more_toggle" onclick="show_more_details(this.id)">SHOW MORE</div>
+						</div>
+						<div class="basic_det_ele_wrapper">
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">NAME</div>
+								<div class="details_value">Aakash</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">E-MAIL</div>
+								<div class="details_value">test@gmail.com</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">PHONE</div>
+								<div class="details_value">9957989683</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">EDUCATION</div>
+								<div class="details_value">IIT GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">WORKPLACE</div>
+								<div class="details_value">GUWAHATI</div>
+							</div>
+							<div class="col-md-2 details_data_wrapper">
+								<div class="details_heading">HOMETOWN</div>
+								<div class="details_value">DELHI</div>
+							</div>
+						</div>
+					</div>
+					<div id = "more_details_8" class="more_details">
+							<div class="row send_transactions">
+							<div><div class="heading_div">SEND TRANSACTIONS</div></div>
+							<div id = "send_entry_1" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "send_entry_2" class="send_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/11/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="row travel_transactions">
+							<div><div class="heading_div">TRAVEL TRANSACTIONS</div></div>
+							<div id = "travel_entry_1" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">1</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_2" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">2</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+							<div id = "travel_entry_3" class="travel_transac_ele_wrapper">
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">SERIAL NO.</div>
+									<div class="details_value">3</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">FROM</div>
+									<div class="details_value">GUWAHATI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TO</div>
+									<div class="details_value">DELHI</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">TRAVEL DATE</div>
+									<div class="details_value">30/12/2018</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">BAGGAGE WEIGHT</div>
+									<div class="details_value">10</div>
+								</div>
+								<div class="col-md-2 details_data_wrapper">
+									<div class="details_heading">DESCRIPTION</div>
+									<div class="details_value">NA</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="send_tab_id_display" class="display_block">
+			<div class="send_display_wrapper">
+				SEND
+			</div>
+		</div>
+		<div id="travel_tab_id_display" class="display_block">
+			<div class="travel_display_wrapper">
+				TRAVEL
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src = "index.js"></script>
+</body>
+</html>
